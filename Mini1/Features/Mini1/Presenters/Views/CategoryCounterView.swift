@@ -8,13 +8,41 @@
 import SwiftUI
 
 struct CategoryCounterView: View {
+    var feeling: FeelingList
+    var counter: Int
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            ZStack{
+                Image(systemName: "circle.fill")
+                    .foregroundColor((Color("lightPurple")))
+                    .frame(width: 19.19, height: 19.19)
+                    .padding(.bottom, 40)
+                    .padding(.leading, 30)
+                
+                Image(feeling.imageName)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 38, height: 38)
+                
+                Text("\(counter)")
+                    .font(.system(size: 10))
+                    .fontWeight(.regular)
+                    .padding(.bottom, 40)
+                    .padding(.leading, 30)
+            }
+            
+            Text(feeling.text)
+                .font(.system(size: 10))
+                .fontWeight(.regular)
+                .foregroundColor((Color("primaryColor")))
+                .padding(.top, -15)
+        }
     }
 }
 
 struct CategoryCounterView_Previews: PreviewProvider {
     static var previews: some View {
-        CategoryCounterView()
+        CategoryCounterView(feeling: FeelingList(imageName: "surprise-excited", text: "Excited", selected: false), counter: 2)
     }
 }
