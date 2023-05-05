@@ -11,6 +11,7 @@ struct ContentView: View {
     @State static var inputImage: UIImage?
     
     var body: some View {
+        Text("Test Git")
         VStack {
             TabView {
                 HomeView()
