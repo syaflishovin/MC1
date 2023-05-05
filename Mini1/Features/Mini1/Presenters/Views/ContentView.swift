@@ -13,28 +13,28 @@ struct ContentView: View {
     var body: some View {
         Text("Test Git")
         VStack {
-            TabView {
-                HomeView()
-                    .tabItem {
-                        Label("Home", systemImage: "house")
-                    }
-//                AddView()
+//            TabView {
+//                HomeView()
+//                    .tabItem {
+//                        Label("Home", systemImage: "house")
+//                    }
+////                AddView()
+////                    .tabItem {
+////                        Label("Add", systemImage: "plus")
+////                    }
+//                AddJournalView()
 //                    .tabItem {
 //                        Label("Add", systemImage: "plus")
 //                    }
-                AddJournalView()
-                    .tabItem {
-                        Label("Add", systemImage: "plus")
-                    }
-                DataView()
-                    .tabItem {
-                        Label("Developer", systemImage: "gearshape")
-                    }
-                JournalListView()
-                    .tabItem {
-                        Label("Home", systemImage: "house")
-                    }
-            }
+//                DataView()
+//                    .tabItem {
+//                        Label("Developer", systemImage: "gearshape")
+//                    }
+//                JournalListView()
+//                    .tabItem {
+//                        Label("Home", systemImage: "house")
+//                    }
+//            }
         }
     }
 }
