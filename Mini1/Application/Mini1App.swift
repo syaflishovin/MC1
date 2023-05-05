@@ -9,9 +9,14 @@ import SwiftUI
 
 @main
 struct Mini1App: App {
+    let coreDataUserManager = CoreDataUserManager()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+            //TagHomeView()
+            //CalendarView(date: Date())
+            //JournalView()
         }
     }
 }
